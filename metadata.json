@@ -1,0 +1,9 @@
+{
+  "name": "Copy of app",
+  "description": "A comprehensive food expiry management app that uses AI to track your pantry, suggest recipes from expiring items, and reduce food waste.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

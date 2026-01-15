@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expronix Expiry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fresh-green: #2ECC71;
+            --warning-orange: #F39C12;
+            --deep-blue: #2980B9;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #FFFFFF !important;
+            color: #2C3E50 !important;
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            -webkit-tap-highlight-color: transparent;
+            overflow: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bg-fresh-green { background-color: var(--fresh-green); }
+        .text-fresh-green { color: var(--fresh-green); }
+        .bg-warning-orange { background-color: var(--warning-orange); }
+        .text-warning-orange { color: var(--warning-orange); }
+        .bg-deep-blue { background-color: var(--deep-blue); }
+        .text-deep-blue { color: var(--deep-blue); }
+
+        /* Pure White Theme overrides */
+        .dark-mode, .dark {
+            background-color: #FFFFFF !important;
+            color: #2C3E50 !important;
+        }
+
+        /* Ensure all containers are white/light */
+        .bg-white, header, nav, main {
+            background-color: #FFFFFF !important;
+        }
+
+        .bg-gray-50, .bg-gray-100 {
+            background-color: #F9FAFB !important;
+        }
+
+        /* High contrast shadows for cards on white background */
+        .shadow-sm {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06) !important;
+        }
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.06), 0 4px 6px -2px rgba(0,0,0,0.04) !important;
+        }
+        .shadow-2xl {
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Hide Scrollbars Utility */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Text size classes */
+        body.text-size-small { font-size: 0.875rem; }
+        body.text-size-medium { font-size: 1rem; }
+        body.text-size-large { font-size: 1.125rem; }
+
+        @media print {
+            body {
+                background-color: white !important;
+                padding: 0 !important;
+                color: black !important;
+            }
+            header, nav, button, .print\:hidden {
+                display: none !important;
+            }
+        }
+
+        /* Scanning Animation */
+        @keyframes scan {
+          0% { top: 25%; opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { top: 75%; opacity: 0; }
+        }
+        .animate-scan {
+          animation: scan 2s linear infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
