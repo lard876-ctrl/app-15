@@ -8,8 +8,7 @@ import {
   UserCircleIcon,
   ArrowLeftIcon,
   ArrowDownTrayIcon,
-  FlagIcon,
-  MicrophoneIcon
+  FlagIcon
 } from '@heroicons/react/24/outline';
 
 interface LayoutProps {
@@ -51,7 +50,8 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <div className="flex flex-col h-screen w-full bg-white overflow-hidden relative transition-colors duration-300">
-      <header className="bg-white px-7 pt-4 pb-1 flex justify-between items-center sticky top-0 z-30 max-w-md mx-auto w-full">
+      {/* Reduced padding to shift content up */}
+      <header className="bg-white px-7 pt-2 pb-1 flex justify-between items-center sticky top-0 z-30 max-w-md mx-auto w-full">
         {isAnalytics ? (
           <>
             <div className="flex items-center space-x-4">
@@ -83,7 +83,7 @@ const Layout: React.FC<LayoutProps> = ({
         )}
       </header>
 
-      <main className="flex-1 overflow-y-auto pb-28 pt-0 p-4 scroll-smooth scrollbar-hide">
+      <main className="flex-1 overflow-y-auto pb-28 pt-2 p-4 scroll-smooth scrollbar-hide">
         {children}
       </main>
 
